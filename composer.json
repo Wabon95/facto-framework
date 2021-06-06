@@ -1,0 +1,12 @@
+{
+    "require": {
+        "cocur/slugify": "^4.0",
+        "symfony/var-dumper": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+          "Facto\\": "facto/",
+          "App\\": "src/App/"
+        }
+    }
+}
