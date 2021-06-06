@@ -27,9 +27,8 @@ class Router
         $this->routes[$path]['callback'] = [new $controller, $method];
     }
 
-    public function get404() {
+    private function get404() {
         header('HTTP/1.0 404 Not Found');
-        http_response_code(404);
         echo 'Page non trouvée';
     }
 
