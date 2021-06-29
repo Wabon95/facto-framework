@@ -19,12 +19,22 @@ class Router
         }
     }
 
-    public function addRoute(string $path, string $method, $callback)
+    public function addRoute(string $path, string $method, $callback, string $name = null)
     {
         $methods = explode('|', $method);
         list($controller, $method) = explode('::', $callback);
+        $this->routes[$path]['name'] = trim($name);
         $this->routes[$path]['methods'] = $methods;
         $this->routes[$path]['callback'] = [new $controller, $method];
+    }
+
+    public function path(string $route)
+    {
+        // dump(in_array($route, $this->routes))
+        
+        // if(in_array($route, $this->routes)) {
+        // }
+        // header('Location: /');
     }
 
     private function get404() {
