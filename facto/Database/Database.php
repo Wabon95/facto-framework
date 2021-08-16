@@ -6,9 +6,9 @@ use PDO;
 
 abstract class Database
 {
-    private static PDO $pdo;
+    private static ?PDO $pdo = null;
 
-    public static function dbConnect()
+    public static function getPDO()
     {
         try {
             if (!self::$pdo) {

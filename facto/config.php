@@ -15,6 +15,6 @@ define('DB_PORT', 8000);
 define('DB_ERROR_MODE', PDO::ERRMODE_EXCEPTION);
 define('DB_FETCH_MODE', PDO::FETCH_ASSOC);
 
-define('DB_NAME', '');
-define('DB_USER', '');
+define('DB_NAME', 'test-repositories');
+define('DB_USER', 'root');
 define('DB_PASSWORD', '');
